@@ -16,6 +16,7 @@ class ProductManager {
         this.nextId = Math.max(...this.products.map(p => p.id)) + 1;
       }
     } catch (error) {
+      console.log("Initializing with empty products array");
       this.products = [];
     }
   }

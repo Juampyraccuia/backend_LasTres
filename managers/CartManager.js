@@ -16,6 +16,7 @@ class CartManager {
         this.nextId = Math.max(...this.carts.map(c => c.id)) + 1;
       }
     } catch (error) {
+      console.log("Initializing with empty carts array");
       this.carts = [];
     }
   }
